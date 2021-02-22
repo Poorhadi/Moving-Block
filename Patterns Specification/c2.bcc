@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Moving Block2/C0.bcc|org.eventb.core.scContextFile#C0" org.eventb.core.source="/Moving Block2/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="C0">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(phases,{res},{int},{changes},{est},{detection},{measuring},{continue})" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#." org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(operations,{normal},{abnormal})" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#2" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm4" org.eventb.core.predicate="S≠(∅ ⦂ ℙ(S))" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#6" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="*" org.eventb.core.label="axm5" org.eventb.core.predicate="C∈S → ℙ1(S)" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#;" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="+" org.eventb.core.label="axm6" org.eventb.core.predicate="∀r⦂S·r∈S⇒r∈C(r)" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#=" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="," org.eventb.core.label="axm7" org.eventb.core.predicate="I≠(∅ ⦂ ℙ(I))" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#?" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="-" org.eventb.core.label="axm8" org.eventb.core.predicate="null∈I" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#A" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="C" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#:" org.eventb.core.type="ℙ(S×ℙ(S))"/>
+<org.eventb.core.scCarrierSet name="I" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#&gt;" org.eventb.core.type="ℙ(I)"/>
+<org.eventb.core.scCarrierSet name="S" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#9" org.eventb.core.type="ℙ(S)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="res" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#(" org.eventb.core.type="phases"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="measuring" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#-" org.eventb.core.type="phases"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="est" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#+" org.eventb.core.type="phases"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="abnormal" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#1" org.eventb.core.type="operations"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="detection" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#," org.eventb.core.type="phases"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="continue" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#8" org.eventb.core.type="phases"/>
+<org.eventb.core.scCarrierSet name="phases" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.scCarrierSet name="T_status" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#5" org.eventb.core.type="ℙ(T_status)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="null" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#@" org.eventb.core.type="I"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="changes" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#*" org.eventb.core.type="phases"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="normal" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#0" org.eventb.core.type="operations"/>
+<org.eventb.core.scCarrierSet name="operations" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#\/" org.eventb.core.type="ℙ(operations)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="int" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#)" org.eventb.core.type="phases"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="C1" org.eventb.core.label="axm1" org.eventb.core.predicate="reasonable∈S × I → BOOL" org.eventb.core.source="/Moving Block2/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="C2" org.eventb.core.label="axm2" org.eventb.core.predicate="ran(reasonable)=BOOL" org.eventb.core.source="/Moving Block2/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="C3" org.eventb.core.label="axm3" org.eventb.core.predicate="estimation∈S × I → S" org.eventb.core.source="/Moving Block2/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="reasonable" org.eventb.core.source="/Moving Block2/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.constant#(" org.eventb.core.type="ℙ(S×I×BOOL)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="estimation" org.eventb.core.source="/Moving Block2/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.constant#+" org.eventb.core.type="ℙ(S×I×S)"/>
+</org.eventb.core.scContextFile>

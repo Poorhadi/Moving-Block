@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="axm3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="b,x,i1,y,i2" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9" org.eventb.core.prSets="operation,phases">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(phases,{res_chk},{int_chk},{ph_pro},{est},{detection},{sensor},{continue_chk}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(operation,{normal},{attack}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32,p33"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p32,p33"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p35">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p36">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p37">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x,y,i1,i2,b)" org.eventb.core.prGoal="p37" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p38">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="i1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="i2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p39,p40,p41">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p43">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="p1,p6,p8,p7,p3,p2,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p39,p40,p41">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p44">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p44" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="S" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.prIdent name="attack" org.eventb.core.type="operation"/>
+<org.eventb.core.prIdent name="continue_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="detection" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="est" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="int_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="normal" org.eventb.core.type="operation"/>
+<org.eventb.core.prIdent name="ph_pro" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="reasonable" org.eventb.core.type="ℙ(ℤ×ℤ×(ℤ×ℤ×BOOL)×BOOL)"/>
+<org.eventb.core.prIdent name="res_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="safe" org.eventb.core.type="ℙ(ℤ×ℤ×ℙ(ℤ×ℤ))"/>
+<org.eventb.core.prIdent name="sensor" org.eventb.core.type="phases"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="ran(reasonable)=BOOL"/>
+<org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬detection=continue_chk"/>
+<org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬est=continue_chk"/>
+<org.eventb.core.prPred name="p43" org.eventb.core.predicate="x ↦ y ↦ (i1 ↦ i2 ↦ b)∈dom(reasonable)">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="i1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="i2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ,i1⦂ℤ,i2⦂ℤ,b⦂BOOL·x ↦ y∈S∧i1∈ℕ∧i2∈ℕ∧⊤⇒x ↦ y ↦ (i1 ↦ i2 ↦ b)∈dom(reasonable)∧reasonable∈ℤ × ℤ × (ℤ × ℤ × BOOL) ⇸ BOOL"/>
+<org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬sensor=continue_chk"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬res_chk=int_chk"/>
+<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬ph_pro=continue_chk"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬res_chk=detection"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ,i1⦂ℤ,i2⦂ℤ,b⦂BOOL·x ↦ y∈S∧i1∈ℕ∧i2∈ℕ∧b∈BOOL⇒x ↦ y ↦ (i1 ↦ i2 ↦ b)∈dom(reasonable)∧reasonable∈ℤ × ℤ × (ℤ × ℤ × BOOL) ⇸ BOOL"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀r⦂ℤ×ℤ·r∈S⇒r∈safe(r)"/>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬int_chk=detection"/>
+<org.eventb.core.prPred name="p32" org.eventb.core.predicate="operation={normal,attack}"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬res_chk=sensor"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="T=1 ‥ 25"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬int_chk=sensor"/>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬ph_pro=detection"/>
+<org.eventb.core.prPred name="p40" org.eventb.core.predicate="i1∈ℕ">
+<org.eventb.core.prIdent name="i1" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬res_chk=est"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ,i1⦂ℤ,i2⦂ℤ,b⦂BOOL·x ↦ y∈S∧i1 ↦ i2 ↦ b∈ℕ × ℕ × BOOL⇒x ↦ y ↦ (i1 ↦ i2 ↦ b)∈dom(reasonable)∧reasonable∈ℤ × ℤ × (ℤ × ℤ × BOOL) ⇸ BOOL"/>
+<org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬est=detection"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬int_chk=ph_pro"/>
+<org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ,i1⦂ℤ,i2⦂ℤ,b⦂BOOL·x ↦ y∈S∧i1∈ℕ∧i2∈ℕ⇒x ↦ y ↦ (i1 ↦ i2 ↦ b)∈dom(reasonable)∧reasonable∈ℤ × ℤ × (ℤ × ℤ × BOOL) ⇸ BOOL"/>
+<org.eventb.core.prPred name="p44" org.eventb.core.predicate="reasonable∈ℤ × ℤ × (ℤ × ℤ × BOOL) ⇸ BOOL"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀r1⦂ℤ,r2⦂ℤ,e1⦂ℤ,e2⦂ℤ·r1 ↦ r2∈S∧e1 ↦ e2∈S⇒(e1 ↦ e2∈safe(r1 ↦ r2)⇔e1≤r1)"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬int_chk=continue_chk"/>
+<org.eventb.core.prPred name="p34" org.eventb.core.predicate="S={x⦂ℤ,y⦂ℤ·x∈T∧y∈T∧x&lt;y ∣ x ↦ y}"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬int_chk=est"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬res_chk=continue_chk"/>
+<org.eventb.core.prPred name="p41" org.eventb.core.predicate="i2∈ℕ">
+<org.eventb.core.prIdent name="i2" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬detection=sensor"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(operation,{normal},{attack})"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="partition(phases,{res_chk},{int_chk},{ph_pro},{est},{detection},{sensor},{continue_chk})"/>
+<org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬normal=attack"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬res_chk=ph_pro"/>
+<org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬est=sensor"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="reasonable∈S × (ℕ × ℕ × BOOL) → BOOL"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="phases={res_chk,int_chk,ph_pro,est,detection,sensor,continue_chk}"/>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬ph_pro=sensor"/>
+<org.eventb.core.prPred name="p38" org.eventb.core.predicate="x ↦ y∈S∧i1∈ℕ∧i2∈ℕ⇒x ↦ y ↦ (i1 ↦ i2 ↦ b)∈dom(reasonable)∧reasonable∈ℤ × ℤ × (ℤ × ℤ × BOOL) ⇸ BOOL">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="i1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="i2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="S={x⦂ℤ,y⦂ℤ·x ↦ y∈T × T∧x&lt;y ∣ x ↦ y}"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="safe∈S → ℙ1(S)"/>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬ph_pro=est"/>
+<org.eventb.core.prPred name="p42" org.eventb.core.predicate="x ↦ y ↦ (i1 ↦ i2 ↦ b)∈dom(reasonable)∧reasonable∈ℤ × ℤ × (ℤ × ℤ × BOOL) ⇸ BOOL">
+<org.eventb.core.prIdent name="b" org.eventb.core.type="BOOL"/>
+<org.eventb.core.prIdent name="i1" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="i2" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="x" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p39" org.eventb.core.predicate="x ↦ y∈S">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="y" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm4/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(phases,{res_chk},{int_chk},{ph_pro},{est},{detection},{sensor}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(operation,{normal},{attack}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19,p20"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p19,p20"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p24">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p24" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬res_chk=int_chk">
+<org.eventb.core.prIdent name="int_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.prIdent name="res_chk" org.eventb.core.type="phases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬res_chk=detection">
+<org.eventb.core.prIdent name="detection" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.prIdent name="res_chk" org.eventb.core.type="phases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬int_chk=detection">
+<org.eventb.core.prIdent name="detection" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="int_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="operation={normal,attack}">
+<org.eventb.core.prIdent name="attack" org.eventb.core.type="operation"/>
+<org.eventb.core.prIdent name="normal" org.eventb.core.type="operation"/>
+<org.eventb.core.prIdent name="operation" org.eventb.core.type="ℙ(operation)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(phases,{res_chk},{int_chk},{ph_pro},{est},{detection},{sensor})">
+<org.eventb.core.prIdent name="detection" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="est" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="int_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="ph_pro" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.prIdent name="res_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="sensor" org.eventb.core.type="phases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬res_chk=sensor">
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.prIdent name="res_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="sensor" org.eventb.core.type="phases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬int_chk=sensor">
+<org.eventb.core.prIdent name="int_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.prIdent name="sensor" org.eventb.core.type="phases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬ph_pro=detection">
+<org.eventb.core.prIdent name="detection" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="ph_pro" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬res_chk=est">
+<org.eventb.core.prIdent name="est" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.prIdent name="res_chk" org.eventb.core.type="phases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬est=detection">
+<org.eventb.core.prIdent name="detection" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="est" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬int_chk=ph_pro">
+<org.eventb.core.prIdent name="int_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="ph_pro" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="S={x⦂ℤ,y⦂ℤ·x∈T∧y∈T∧x&lt;y ∣ x ↦ y}">
+<org.eventb.core.prIdent name="S" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀i⦂ℤ×ℤ×BOOL·i∈ℕ × ℕ × BOOL⇒⊤"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬int_chk=est">
+<org.eventb.core.prIdent name="est" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="int_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p24" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="phases={res_chk,int_chk,ph_pro,est,detection,sensor}">
+<org.eventb.core.prIdent name="detection" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="est" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="int_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="ph_pro" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.prIdent name="res_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="sensor" org.eventb.core.type="phases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬detection=sensor">
+<org.eventb.core.prIdent name="detection" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.prIdent name="sensor" org.eventb.core.type="phases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(operation,{normal},{attack})">
+<org.eventb.core.prIdent name="attack" org.eventb.core.type="operation"/>
+<org.eventb.core.prIdent name="normal" org.eventb.core.type="operation"/>
+<org.eventb.core.prIdent name="operation" org.eventb.core.type="ℙ(operation)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬normal=attack">
+<org.eventb.core.prIdent name="attack" org.eventb.core.type="operation"/>
+<org.eventb.core.prIdent name="normal" org.eventb.core.type="operation"/>
+<org.eventb.core.prIdent name="operation" org.eventb.core.type="ℙ(operation)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀i⦂ℤ×ℤ×BOOL·i∈ℕ × ℕ × BOOL⇒ran({i})⊆BOOL"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬res_chk=ph_pro">
+<org.eventb.core.prIdent name="ph_pro" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.prIdent name="res_chk" org.eventb.core.type="phases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬est=sensor">
+<org.eventb.core.prIdent name="est" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.prIdent name="sensor" org.eventb.core.type="phases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬ph_pro=sensor">
+<org.eventb.core.prIdent name="ph_pro" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.prIdent name="sensor" org.eventb.core.type="phases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="S={x⦂ℤ,y⦂ℤ·x ↦ y∈T × T∧x&lt;y ∣ x ↦ y}">
+<org.eventb.core.prIdent name="S" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.prIdent name="T" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬ph_pro=est">
+<org.eventb.core.prIdent name="est" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="ph_pro" org.eventb.core.type="phases"/>
+<org.eventb.core.prIdent name="phases" org.eventb.core.type="ℙ(phases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="axm5/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="i" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees i)" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prIdent name="i" org.eventb.core.type="ℤ×ℤ×BOOL"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p4">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p4">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀i⦂ℤ×ℤ×BOOL·i∈ℕ × ℕ × BOOL⇒dom({i})⊆ℕ × ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="i∈ℕ × ℕ × BOOL">
+<org.eventb.core.prIdent name="i" org.eventb.core.type="ℤ×ℤ×BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="dom({i})⊆ℕ × ℕ">
+<org.eventb.core.prIdent name="i" org.eventb.core.type="ℤ×ℤ×BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="i∈ℕ × ℕ × BOOL⇒dom({i})⊆ℕ × ℕ">
+<org.eventb.core.prIdent name="i" org.eventb.core.type="ℤ×ℤ×BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀i⦂ℤ×ℤ×BOOL·i∈ℕ × ℕ × BOOL⇒ran({i})⊆BOOL"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀i⦂ℤ×ℤ×BOOL·i∈ℕ × ℕ × BOOL⇒⊤"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

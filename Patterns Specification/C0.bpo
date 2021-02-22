@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="I" org.eventb.core.type="ℙ(I)"/>
+<org.eventb.core.poIdentifier name="S" org.eventb.core.type="ℙ(S)"/>
+<org.eventb.core.poIdentifier name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.poIdentifier name="T_status" org.eventb.core.type="ℙ(T_status)"/>
+<org.eventb.core.poIdentifier name="operations" org.eventb.core.type="ℙ(operations)"/>
+<org.eventb.core.poIdentifier name="C" org.eventb.core.type="ℙ(S×ℙ(S))"/>
+<org.eventb.core.poIdentifier name="res" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="measuring" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="est" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="abnormal" org.eventb.core.type="operations"/>
+<org.eventb.core.poIdentifier name="detection" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="continue" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="null" org.eventb.core.type="I"/>
+<org.eventb.core.poIdentifier name="changes" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="normal" org.eventb.core.type="operations"/>
+<org.eventb.core.poIdentifier name="int" org.eventb.core.type="phases"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Moving Block2/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#HYP*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂S·r∈S⇒r∈dom(C)∧C∈S ⇸ ℙ(S)" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#="/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#="/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Moving Block2/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Moving Block2/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#HYP*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYP*" org.eventb.core.parentSet="/Moving Block2/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(phases,{res},{int},{changes},{est},{detection},{measuring},{continue})" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(operations,{normal},{abnormal})" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="S≠(∅ ⦂ ℙ(S))" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#6"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="C∈S → ℙ1(S)" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Moving Block2/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#HYP*" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀r⦂S·r∈S⇒r∈C(r)" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#="/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="I≠(∅ ⦂ ℙ(I))" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#?"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="null∈I" org.eventb.core.source="/Moving Block2/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#A"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

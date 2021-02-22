@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="phases" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.poIdentifier name="T_status" org.eventb.core.type="ℙ(T_status)"/>
+<org.eventb.core.poIdentifier name="operation" org.eventb.core.type="ℙ(operation)"/>
+<org.eventb.core.poIdentifier name="S" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="T" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="est" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="sensor" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="res_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="continue_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="attack" org.eventb.core.type="operation"/>
+<org.eventb.core.poIdentifier name="detection" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="int_chk" org.eventb.core.type="phases"/>
+<org.eventb.core.poIdentifier name="normal" org.eventb.core.type="operation"/>
+<org.eventb.core.poIdentifier name="ph_pro" org.eventb.core.type="phases"/>
+<org.eventb.core.poPredicate name="continue_chl" org.eventb.core.predicate="partition(phases,{res_chk},{int_chk},{ph_pro},{est},{detection},{sensor},{continue_chk})" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="continue_chm" org.eventb.core.predicate="partition(operation,{normal},{attack})" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="continue_chn" org.eventb.core.predicate="T=1 ‥ 25" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="continue_cho" org.eventb.core.predicate="S={x⦂ℤ,y⦂ℤ·x ↦ y∈T × T∧x&lt;y ∣ x ↦ y}" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#6"/>
+<org.eventb.core.poIdentifier name="safe" org.eventb.core.type="ℙ(ℤ×ℤ×ℙ(ℤ×ℤ))"/>
+<org.eventb.core.poPredicate name="continue_chp" org.eventb.core.predicate="safe∈S → ℙ1(S)" org.eventb.core.source="/Moving Block/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="continue_chq" org.eventb.core.predicate="∀r1⦂ℤ,r2⦂ℤ,e1⦂ℤ,e2⦂ℤ·r1 ↦ r2∈S∧e1 ↦ e2∈S⇒(e1 ↦ e2∈safe(r1 ↦ r2)⇔e1≤r1)" org.eventb.core.source="/Moving Block/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="continue_chr" org.eventb.core.predicate="∀r⦂ℤ×ℤ·r∈S⇒r∈safe(r)" org.eventb.core.source="/Moving Block/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#+"/>
+<org.eventb.core.poIdentifier name="reasonable" org.eventb.core.type="ℙ(ℤ×ℤ×(ℤ×ℤ×BOOL)×BOOL)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#HYPc3"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ,i1⦂ℤ,i2⦂ℤ,b⦂BOOL·x ↦ y∈S∧i1 ↦ i2 ↦ b∈ℕ × ℕ × BOOL⇒x ↦ y ↦ (i1 ↦ i2 ↦ b)∈dom(reasonable)∧reasonable∈ℤ × ℤ × (ℤ × ℤ × BOOL) ⇸ BOOL" org.eventb.core.source="/Moving Block/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Moving Block/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#HYPc3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm4/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#HYPc4"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ×ℤ×BOOL·i∈ℕ × ℕ × BOOL⇒ran({i})⊆BOOL" org.eventb.core.source="/Moving Block/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Moving Block/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#HYPc4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm5/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#HYPc5"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ×ℤ×BOOL·i∈ℕ × ℕ × BOOL⇒dom({i})⊆ℕ × ℕ" org.eventb.core.source="/Moving Block/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Moving Block/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#HYPc5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPc3" org.eventb.core.parentSet="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="reasonable∈S × (ℕ × ℕ × BOOL) → BOOL" org.eventb.core.source="/Moving Block/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="ran(reasonable)=BOOL" org.eventb.core.source="/Moving Block/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPc4" org.eventb.core.parentSet="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#HYPc3" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀x⦂ℤ,y⦂ℤ,i1⦂ℤ,i2⦂ℤ,b⦂BOOL·x ↦ y∈S∧i1 ↦ i2 ↦ b∈ℕ × ℕ × BOOL⇒(reasonable(x ↦ y ↦ (i1 ↦ i2 ↦ b))=TRUE⇔((b=FALSE∧i2=0)∨(b=TRUE∧i2≥3))∧i1&gt;x∧i1∈T∧i1 − i2∈T)" org.eventb.core.source="/Moving Block/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPc5" org.eventb.core.parentSet="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#HYPc4" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀i⦂ℤ×ℤ×BOOL·i∈ℕ × ℕ × BOOL⇒ran({i})⊆BOOL" org.eventb.core.source="/Moving Block/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Moving Block/c2.bpo|org.eventb.core.poFile#c2|org.eventb.core.poPredicateSet#HYPc5" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀i⦂ℤ×ℤ×BOOL·i∈ℕ × ℕ × BOOL⇒dom({i})⊆ℕ × ℕ" org.eventb.core.source="/Moving Block/c2.buc|org.eventb.core.contextFile#c2|org.eventb.core.axiom#-"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="M0"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="c2"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="phase"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="P_state"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="input"/>
+<org.eventb.core.variable name="/" org.eventb.core.comment=" " org.eventb.core.identifier="E_state"/>
+<org.eventb.core.variable name="1" org.eventb.core.identifier="oper"/>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="phase ≔ ph_pro" org.eventb.core.comment=" " org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="P_state≔1↦4" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="input ≔ 0↦0↦FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="E_state ≔ 1↦4" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="oper ≔ normal" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="measurement ≔ 1↦0↦FALSE" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="internal2" org.eventb.core.assignment="continue≔TRUE" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="internal3" org.eventb.core.assignment="P_pre ≔ 1↦4" org.eventb.core.label="act9"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Process">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Process"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="P_pre≔P_state" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Sensor">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Sensor"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="phase=sensor"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="phase≔int_chk" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="max_front"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="int"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="max_front∈T ∧ tr_length∈ℕ ∧ int∈BOOL "/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd3" org.eventb.core.predicate="x↦y=P_state"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="tr_length"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="measurement≔max_front↦tr_length↦int" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="max_front≥y ∧ max_front≤y+2 "/>
+<org.eventb.core.guard name="7" org.eventb.core.label="grd7" org.eventb.core.predicate="ran({measurement})={int0}"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="grd5" org.eventb.core.predicate="int=TRUE ⇒ (max_front−tr_length≤x)"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="grd6" org.eventb.core.predicate="int=FALSE⇒tr_length=0"/>
+<org.eventb.core.guard name="9" org.eventb.core.label="grd8" org.eventb.core.predicate="int0=FALSE⇒int=FALSE"/>
+<org.eventb.core.parameter name="0" org.eventb.core.identifier="x"/>
+<org.eventb.core.parameter name="1" org.eventb.core.identifier="y"/>
+<org.eventb.core.parameter name="8" org.eventb.core.identifier="int0"/>
+<org.eventb.core.guard name=":" org.eventb.core.label="grd9" org.eventb.core.predicate="max_front−tr_length∈T"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Checking_int">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Checking_int"/>
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="i"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="i∈ℕ ×ℕ ×BOOL"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="oper=normal"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="phase=int_chk"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="phase, input:∣ &#13;&#10;phase'∈{detection, res_chk} ∧&#13;&#10;input'∈ℕ×ℕ×BOOL ∧&#13;&#10;(phase'=res_chk⇒input'=(i))" org.eventb.core.label="act1"/>
+<org.eventb.core.witness name="/" org.eventb.core.label="integrity" org.eventb.core.predicate="integrity=bool(i=measurement)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Checking_res">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Checking_res"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="phase=res_chk"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="oper=normal"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="res∈BOOL"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="phase, input:∣ &#13;&#10;(res=TRUE ⇒phase'=est) ∧&#13;&#10;(res=FALSE ⇒phase'=detection) ∧&#13;&#10;(phase'=est⇒input'=input) ∧&#13;&#10;(phase'=detection⇒input'=0↦0↦FALSE) " org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="res"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="res=reasonable(E_state↦input)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Estimation">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Estimation"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="phase=est"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="phase≔continue_chk" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="oper=normal"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="E_state:∣ &#13;&#10;( b=FALSE⇒ E_state'=e1↦i1 )∧&#13;&#10;( b=TRUE ⇒ E_state'=i1−i2↦i1)" org.eventb.core.label="act2"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="i1"/>
+<org.eventb.core.parameter name="," org.eventb.core.identifier="i2"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="b"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="input=i1↦i2↦b"/>
+<org.eventb.core.parameter name="/" org.eventb.core.identifier="e1"/>
+<org.eventb.core.parameter name="0" org.eventb.core.identifier="e2"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd4" org.eventb.core.predicate="E_state=e1↦e2"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="i1∈T ∧ i1−i2∈T " org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="grd6" org.eventb.core.predicate="b=FALSE⇒i2=0" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="grd7" org.eventb.core.predicate="b=TRUE⇒i2≥3" org.eventb.core.theorem="true"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Detection">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Detection"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name=";" org.eventb.core.identifier="measurement"/>
+<org.eventb.core.invariant name="=" org.eventb.core.label="inv1" org.eventb.core.predicate="measurement ∈ ℕ × ℕ× BOOL "/>
+<org.eventb.core.invariant name="N" org.eventb.core.label="inv11" org.eventb.core.predicate="input∈ ℕ × ℕ× BOOL "/>
+<org.eventb.core.invariant name="&gt;" org.eventb.core.label="inv2" org.eventb.core.predicate="(phase=est ∨ phase=res_chk) ⇒(input=measurement⇔input_int=TRUE)"/>
+<org.eventb.core.invariant name="?" org.eventb.core.label="inv3" org.eventb.core.predicate="phase=est  ⇒reasonable(E_state↦input)=TRUE  "/>
+<org.eventb.core.invariant name="B" org.eventb.core.label="inv4" org.eventb.core.predicate="phase=int_chk⇒reasonable(E_state↦measurement)=TRUE"/>
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="continuation check">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="continuation check"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="D" org.eventb.core.identifier="continue"/>
+<org.eventb.core.variable name="E" org.eventb.core.identifier="P_pre"/>
+<org.eventb.core.invariant name="F" org.eventb.core.label="inv5" org.eventb.core.predicate="P_pre ∈ S"/>
+<org.eventb.core.invariant name="I" org.eventb.core.label="inv6" org.eventb.core.predicate="(phase≠ph_pro ∧ phase≠continue_chk)⇒E_state∈safe(P_pre) "/>
+<org.eventb.core.invariant name="J" org.eventb.core.label="inv7" org.eventb.core.predicate="P_pre∈safe(P_state)"/>
+<org.eventb.core.invariant name="K" org.eventb.core.label="inv8" org.eventb.core.predicate="∀i1,i2,b,x,y· i1↦i2↦b=measurement ∧ x↦y=P_state ∧ b=TRUE⇒(phase∈{int_chk, res_chk, est}⇒i1−i2≤x)"/>
+<org.eventb.core.invariant name="L" org.eventb.core.label="inv9" org.eventb.core.predicate="∀i1,i2,b·  i1↦i2↦b=measurement  ⇒i1−i2∈T"/>
+<org.eventb.core.invariant name="M" org.eventb.core.label="inv10" org.eventb.core.predicate="(phase=continue_chk ∧ measurement=input)⇒ E_state ∈ safe(P_state)"/>
+</org.eventb.core.machineFile>

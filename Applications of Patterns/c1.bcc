@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Moving Block/C0.bcc|org.eventb.core.scContextFile#C0" org.eventb.core.source="/Moving Block/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="C0">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(phases,{res_chk},{int_chk},{ph_pro},{est},{detection},{sensor},{continue_chk})" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#." org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(operation,{normal},{attack})" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#2" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="T=1 ‥ 25" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#4" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="*" org.eventb.core.label="axm4" org.eventb.core.predicate="S={x⦂ℤ,y⦂ℤ·x ↦ y∈T × T∧x&lt;y ∣ x ↦ y}" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#6" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="S" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#7" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="T" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#3" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="est" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#+" org.eventb.core.type="phases"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="sensor" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#-" org.eventb.core.type="phases"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="res_chk" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#(" org.eventb.core.type="phases"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="continue_chk" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#8" org.eventb.core.type="phases"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="attack" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#1" org.eventb.core.type="operation"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="detection" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#," org.eventb.core.type="phases"/>
+<org.eventb.core.scCarrierSet name="phases" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(phases)"/>
+<org.eventb.core.scCarrierSet name="T_status" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#5" org.eventb.core.type="ℙ(T_status)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="int_chk" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#)" org.eventb.core.type="phases"/>
+<org.eventb.core.scCarrierSet name="operation" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.carrierSet#\/" org.eventb.core.type="ℙ(operation)"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="normal" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#0" org.eventb.core.type="operation"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="ph_pro" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.constant#*" org.eventb.core.type="phases"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="C1" org.eventb.core.label="axm1" org.eventb.core.predicate="safe∈S → ℙ1(S)" org.eventb.core.source="/Moving Block/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="C2" org.eventb.core.label="axm2" org.eventb.core.predicate="∀r1⦂ℤ,r2⦂ℤ,e1⦂ℤ,e2⦂ℤ·r1 ↦ r2∈S∧e1 ↦ e2∈S⇒(e1 ↦ e2∈safe(r1 ↦ r2)⇔e1≤r1)" org.eventb.core.source="/Moving Block/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="C3" org.eventb.core.label="axm3" org.eventb.core.predicate="∀r⦂ℤ×ℤ·r∈S⇒r∈safe(r)" org.eventb.core.source="/Moving Block/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.axiom#+" org.eventb.core.theorem="true"/>
+<org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="safe" org.eventb.core.source="/Moving Block/c1.buc|org.eventb.core.contextFile#c1|org.eventb.core.constant#)" org.eventb.core.type="ℙ(ℤ×ℤ×ℙ(ℤ×ℤ))"/>
+</org.eventb.core.scContextFile>

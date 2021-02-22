@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="M00"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="c2"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="phase"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="P_state"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="input"/>
+<org.eventb.core.variable name="/" org.eventb.core.comment=" " org.eventb.core.identifier="E_state"/>
+<org.eventb.core.variable name="1" org.eventb.core.identifier="oper"/>
+<org.eventb.core.variable name="D" org.eventb.core.identifier="continue"/>
+<org.eventb.core.variable name="E" org.eventb.core.identifier="P_pre"/>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="phase ≔ ph_pro" org.eventb.core.comment=" " org.eventb.core.label="act1"/>
+<org.eventb.core.action name="internal2" org.eventb.core.assignment="P_state≔1↦4" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="internal3" org.eventb.core.assignment="input ≔ 0↦0↦FALSE" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="internal4" org.eventb.core.assignment="E_state ≔ 1↦4" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="internal5" org.eventb.core.assignment="oper ≔ normal" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="internal7" org.eventb.core.assignment="continue≔TRUE" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="internal8" org.eventb.core.assignment="P_pre ≔ 1↦4" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="connection ≔ FALSE" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="MAC_Cal_sensor :∈ ℕ ×ℕ ×BOOL→ ℕ1" org.eventb.core.label="act11"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="MAC_Cal_controller :∈ ℕ ×ℕ ×BOOL→ ℕ1" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="sen_out ≔1↦0↦FALSE↦1 " org.eventb.core.label="act13"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="input_MAC :∈ℕ1 " org.eventb.core.label="act14"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Process">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Process"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="connection=TRUE"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Sensor">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Sensor"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="phase=sensor"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="phase≔int_chk" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="max_front"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="int"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="max_front∈T ∧ tr_length∈ℕ ∧ int∈BOOL "/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd3" org.eventb.core.predicate="x↦y=P_state"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="tr_length"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="sen_out≔(max_front↦tr_length↦int)↦MAC_Cal_sensor(max_front↦tr_length↦int)" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="max_front≥y ∧ max_front≤y+2 "/>
+<org.eventb.core.guard name="7" org.eventb.core.label="grd7" org.eventb.core.predicate="dom({sen_out})={max_front0↦tr_length0↦int0}"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="grd5" org.eventb.core.predicate="int=TRUE ⇒ (max_front−tr_length≤x ∧ max_front0−tr_length0≤max_front−tr_length)"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="grd6" org.eventb.core.predicate="int=FALSE⇒tr_length=0"/>
+<org.eventb.core.guard name="9" org.eventb.core.label="grd8" org.eventb.core.predicate="int0=FALSE⇒int=FALSE"/>
+<org.eventb.core.parameter name="0" org.eventb.core.identifier="x"/>
+<org.eventb.core.parameter name="1" org.eventb.core.identifier="y"/>
+<org.eventb.core.parameter name="5" org.eventb.core.identifier="tr_length0"/>
+<org.eventb.core.parameter name="6" org.eventb.core.identifier="max_front0"/>
+<org.eventb.core.parameter name="8" org.eventb.core.identifier="int0"/>
+<org.eventb.core.guard name=":" org.eventb.core.label="grd9" org.eventb.core.predicate="max_front−tr_length∈T"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Checking_int">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Checking_int"/>
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="i1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="i1∈ℕ ×ℕ ×BOOL×ℕ1 ∧ value∈ℕ ×ℕ ×BOOL ∧ int_check∈BOOL "/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="oper=normal"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="phase=int_chk"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="phase, input:∣ &#13;&#10;(int_check=TRUE ⇒phase'=res_chk) ∧&#13;&#10;(int_check=FALSE ⇒phase'=detection) ∧&#13;&#10;input'∈ℕ×ℕ ×BOOL ∧&#13;&#10;(phase'=res_chk⇒input'=(value))" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="." org.eventb.core.identifier="value"/>
+<org.eventb.core.parameter name="/" org.eventb.core.identifier="int_check"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="dom({i1})={value}"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="ran({i1})={MAC_Cal_controller(value)}⇔int_check=TRUE"/>
+<org.eventb.core.witness name="2" org.eventb.core.label="i" org.eventb.core.predicate="i=value"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="input_MAC :∣ input_MAC'∈ran({i1})" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Checking_res">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Checking_res"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Estimation">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Estimation"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Detection">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Detection"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="continuation check">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="continuation check"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="N" org.eventb.core.identifier="connection"/>
+<org.eventb.core.invariant name="O" org.eventb.core.label="inv1" org.eventb.core.predicate="connection ∈ BOOL"/>
+<org.eventb.core.variable name="P" org.eventb.core.identifier="MAC_Cal_sensor"/>
+<org.eventb.core.invariant name="Q" org.eventb.core.label="inv2" org.eventb.core.predicate="MAC_Cal_sensor ∈ ℕ ×ℕ ×BOOL→ ℕ1 "/>
+<org.eventb.core.variable name="R" org.eventb.core.identifier="MAC_Cal_controller"/>
+<org.eventb.core.invariant name="S" org.eventb.core.label="inv3" org.eventb.core.predicate="MAC_Cal_controller ∈ ℕ ×ℕ ×BOOL→ ℕ1"/>
+<org.eventb.core.variable name="T" org.eventb.core.identifier="sen_out"/>
+<org.eventb.core.invariant name="U" org.eventb.core.label="inv4" org.eventb.core.predicate="sen_out ∈  ℕ×ℕ×BOOL×ℕ1 "/>
+<org.eventb.core.variable name="V" org.eventb.core.identifier="input_MAC"/>
+<org.eventb.core.invariant name="W" org.eventb.core.label="inv5" org.eventb.core.predicate="input_MAC ∈ ℕ1 "/>
+<org.eventb.core.event name="X" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Connection set up">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="connection=FALSE"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="connection≔TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="MAC_Cal_controller:∈ ℕ×ℕ×BOOL → ℕ1 " org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="MAC_Cal_sensor:∈ ℕ×ℕ×BOOL → ℕ1 " org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="Y" org.eventb.core.label="inv6" org.eventb.core.predicate="{measurement}=dom({sen_out})"/>
+<org.eventb.core.invariant name="Z" org.eventb.core.label="inv7" org.eventb.core.predicate="(phase=res_chk ∨ phase=est) ⇒MAC_Cal_controller(input)= input_MAC"/>
+<org.eventb.core.invariant name="[" org.eventb.core.label="inv8" org.eventb.core.predicate="connection=FALSE⇒phase=ph_pro"/>
+</org.eventb.core.machineFile>
