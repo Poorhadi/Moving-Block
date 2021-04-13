@@ -35,7 +35,7 @@
 <org.eventb.core.psStatus name="Estimation/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="Estimation/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="Estimation/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="Estimation/act2/FIS" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="Estimation/act2/FIS" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="Detection/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="Detection/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="Detection/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="false"/>

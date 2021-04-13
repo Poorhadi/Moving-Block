@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-<org.eventb.core.refinesMachine name="'" org.eventb.core.target="M00001"/>
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="asd"/>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="c3"/>
 <org.eventb.core.variable name=")" org.eventb.core.identifier="phase"/>
 <org.eventb.core.variable name="+" org.eventb.core.identifier="P_real"/>
@@ -150,8 +150,10 @@
 <org.eventb.core.variable name="'B" org.eventb.core.identifier="tamper_2"/>
 <org.eventb.core.invariant name="'C" org.eventb.core.label="inv4" org.eventb.core.predicate="tamper_2 ∈ BOOL"/>
 <org.eventb.core.variable name="'D" org.eventb.core.identifier="MAC_tampering"/>
-<org.eventb.core.invariant name="'E" org.eventb.core.label="inv5" org.eventb.core.predicate="MAC_tampering ∈ I→ℙ1(ℕ1)"/>
-<org.eventb.core.invariant name="'F" org.eventb.core.label="inv6" org.eventb.core.predicate="(tamper_1=FALSE ∧ phase=continue)⇒ P_est∈C(P_real)"/>
-<org.eventb.core.invariant name="'G" org.eventb.core.label="inv7" org.eventb.core.predicate="(tamper_2=FALSE ∧ Pphase=5)⇒MAC_sen=MAC_contr ∧ authen_sensor=TRUE ∧ authen_controller=TRUE"/>
-<org.eventb.core.invariant name="'H" org.eventb.core.label="inv8" org.eventb.core.predicate="(tamper_1=TRUE ∧ phase=continue)⇒ P_est∈C(P_real)"/>
+<org.eventb.core.invariant name="'E" org.eventb.core.comment=" " org.eventb.core.label="inv5" org.eventb.core.predicate="MAC_tampering ∈ I→ℙ1(ℕ1)"/>
+<org.eventb.core.invariant name="'J" org.eventb.core.label="inv10" org.eventb.core.predicate="tamper_1=FALSE∧ Pphase∈{3,4,5}⇒r1=m1"/>
+<org.eventb.core.invariant name="'F" org.eventb.core.comment="     " org.eventb.core.label="inv6" org.eventb.core.predicate="(tamper_2=FALSE ∧ phase=continue)⇒ P_est∈C(P_real)"/>
+<org.eventb.core.invariant name="'G" org.eventb.core.label="inv7" org.eventb.core.predicate="(tamper_1=FALSE ∧ Pphase=5)⇒MAC_sen=MAC_contr ∧ authen_sensor=TRUE ∧ authen_controller=TRUE"/>
+<org.eventb.core.invariant name="'H" org.eventb.core.label="inv8" org.eventb.core.predicate="tamper_1=FALSE∧ Pphase∈{4,5}⇒ r1=m1 ∧ r2=m2"/>
+<org.eventb.core.invariant name="'I" org.eventb.core.label="inv9" org.eventb.core.predicate="tamper_1=FALSE∧ Pphase∈{5} ⇒ r1=m1 ∧ r2=m2 ∧ r3=m3 "/>
 </org.eventb.core.machineFile>
