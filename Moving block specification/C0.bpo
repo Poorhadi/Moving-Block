@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="Phases" org.eventb.core.type="ℙ(Phases)"/>
+<org.eventb.core.poIdentifier name="Operation" org.eventb.core.type="ℙ(Operation)"/>
+<org.eventb.core.poIdentifier name="T" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="l" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="res" org.eventb.core.type="Phases"/>
+<org.eventb.core.poIdentifier name="est" org.eventb.core.type="Phases"/>
+<org.eventb.core.poIdentifier name="integrity" org.eventb.core.type="Phases"/>
+<org.eventb.core.poIdentifier name="abnormal" org.eventb.core.type="Operation"/>
+<org.eventb.core.poIdentifier name="detection" org.eventb.core.type="Phases"/>
+<org.eventb.core.poIdentifier name="move" org.eventb.core.type="Phases"/>
+<org.eventb.core.poIdentifier name="report" org.eventb.core.type="Phases"/>
+<org.eventb.core.poIdentifier name="checking" org.eventb.core.type="Phases"/>
+<org.eventb.core.poIdentifier name="normal" org.eventb.core.type="Operation"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Moving Block/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(Phases,{move},{report},{res},{est},{detection},{integrity},{checking})" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="l∈ℕ∧l≥50" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#:"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="partition(Operation,{normal},{abnormal})" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#2"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="T=1 ‥ l" org.eventb.core.source="/Moving Block/C0.buc|org.eventb.core.contextFile#C0|org.eventb.core.axiom#4"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

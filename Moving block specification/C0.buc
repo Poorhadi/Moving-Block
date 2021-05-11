@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="Phases"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="(" org.eventb.core.identifier="move"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=")" org.eventb.core.identifier="report"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="*" org.eventb.core.identifier="integrity"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="+" org.eventb.core.identifier="est"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="," org.eventb.core.identifier="detection"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="-" org.eventb.core.identifier="res"/>
+<org.eventb.core.axiom name="." org.eventb.core.label="axm1" org.eventb.core.predicate="partition(Phases, {move}, {report}, {res}, {est}, {detection}, {integrity}, {checking})"/>
+<org.eventb.core.axiom name=":" org.eventb.core.label="axm5" org.eventb.core.predicate="l∈ℕ ∧ l≥50"/>
+<org.eventb.core.carrierSet name="/" org.eventb.core.identifier="Operation"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="0" org.eventb.core.identifier="normal"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="1" org.eventb.core.identifier="abnormal"/>
+<org.eventb.core.axiom name="2" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(Operation, {normal}, {abnormal})"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="3" org.eventb.core.identifier="T"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="axm3" org.eventb.core.predicate="T=1‥l"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="8" org.eventb.core.identifier="checking"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="9" org.eventb.core.identifier="l"/>
+</org.eventb.core.contextFile>

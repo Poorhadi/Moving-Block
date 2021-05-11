@@ -1,0 +1,87 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\usepackage{multicol}
+\begin{document}
+	\begin{tiny}
+		
+
+	\begin{multicols}{2}
+\SingleHeader{}
+\MACHINE{}{}{}{}
+\VARIABLES{
+	         
+	\Variable{p1\_in, p1\_out }{}
+
+}
+\INVARIANTS{
+
+
+
+	\Invariant{inv10}{true}{$(phase=checking \land{} p1\_in=p1\_out)\limp{} R\_est\leq{}R\_real$}{}
+	\Invariant{inv12}{false}{$phase=est\limp{}(p1\_in(int)\in{}\{0,1\}\limp{}p1\_in(len)=0)$}{}
+	\Invariant{inv13}{false}{$phase=est\limp{}(p1\_in(int)=2\limp{}p1\_in(len)\geq{}3)$}{}
+	\Invariant{inv14}{false}{$phase=est\limp{}(p1\_in(front)\geq{}R\_est \land{} p1\_in(front)\in{}T \land{} p1\_in(front)- p1\_in(len)\in{}T \land{} p1\_in(int)\in{}\{0,1,2\})$}{}
+
+
+}
+\EVENTS{
+
+
+\EVT{Report}{false}{ordinary}{Report}{}{
+
+	\GUARDS{true}{
+
+		\Guard{grd2}{false}{$fr\in{}T \land{} le\in{}T \land{} i\in{}\{0,1,2\}$}{true}{}
+		\Guard{grd4}{false}{$fr\geq{}F\_real \land{} fr\leq{}F\_real+2 $}{true}{}
+		\Guard{grd5}{false}{$i=2 \limp{} (fr-R\_real\leq{}le)$}{true}{}
+		\Guard{grd6}{false}{$i\in{}\{0,1\}\limp{} le=0$}{true}{}
+
+	}
+	\ACTIONS{true}{
+
+		\Action{act2}{$p1\_out\bcmeq{} \{front\mapsto{}fr, int\mapsto{}i, len\mapsto{}le\} $}{true}{}
+	}
+}
+
+\EVT{Res}{false}{ordinary}{Res}{}{
+
+	\GUARDS{true}{
+
+
+
+		\Guard{grd4}{false}{$bool(p1\_in(int)\in{}\{0,1\}\limp{}p1\_in(len)=0)=valid1$}{true}{}
+		\Guard{grd5}{false}{$bool(p1\_in(int)=2\limp{}p1\_in(len)\geq{}3)=valid2$}{true}{}
+		\Guard{grd6}{false}{$bool(p1\_in(front)\geq{}R\_est \land{} p1\_in(front)\in{}T \land{} p1\_in(front)- p1\_in(len)\in{}T \land{} p1\_in(int)\in{}\{0,1,2\})=valid3$}{true}{}
+		\Guard{grd7}{false}{$validity=TRUE\leqv{}(valid1=TRUE \land{} valid2=TRUE \land{} valid3=TRUE)$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$phase\bcmsuch{} (validity=TRUE \limp{} phase'=est) \land{} (validity=FALSE\limp{} phase'=detection)$}{true}{}
+	}
+}
+\EVT{Est}{false}{ordinary}{Est}{}{
+
+	\GUARDS{true}{
+
+
+
+
+
+		\Guard{grd5}{false}{$f\_est=p1\_in(front)$}{true}{}
+
+		\Guard{grd9}{false}{$p1\_in(int)=2 \limp{} r\_est=f\_est-p1\_in(len)$}{true}{}
+		\Guard{grd8}{false}{$p1\_in(int)\in{}\{0,1\} \limp{} r\_est=R\_est$}{true}{}
+
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$phase\bcmeq{}checking$}{true}{}
+		\Action{act2}{$R\_est\bcmeq{}r\_est$}{true}{}
+		\Action{act3}{$F\_est\bcmeq{}f\_est$}{true}{}
+	}
+}
+
+
+}
+\END
+	        \end{multicols}{2}
+        	\end{tiny}
+\end{document}

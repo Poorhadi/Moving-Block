@@ -1,0 +1,68 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\usepackage{multicol}
+\begin{document}
+	\begin{tiny}
+		\begin{multicols}{2}
+\SingleHeader{}
+\MACHINE{}{}{}{}
+\VARIABLES{
+
+	\Variable{tamper}{}
+	\Variable{valid\_forge}{}
+}
+\INVARIANTS{
+
+	\Invariant{inv4}{false}{$tamper=FALSE \land{} phase\in{}\{res,est,checking\} \limp{} p\_in=p\_out$}{}
+	\Invariant{inv3}{true}{$(tamper=FALSE \land{} phase=checking)\limp{} R\_est\leq{}R\_real$}{}
+	\Invariant{inv5}{false}{$(tamper=TRUE \land{} phase=checking )\limp{} R\_real<R\_est$}{}
+
+
+	\Invariant{inv8}{false}{$(tamper=TRUE \land{} valid\_forge=TRUE)\limp{}phase\neq{}detection$}{}
+	\Invariant{inv9}{false}{$(valid\_forge =TRUE\land{} tamper=TRUE)\limp{}comp\_mac(p\_in(front)\mapsto{}p\_in(int)\mapsto{}p\_in(len))= p\_in(mac)$}{}
+
+
+
+	\Invariant{inv13}{false}{$(tamper=TRUE \land{} phase\in{}\{res,est,checking\}) \limp{} valid\_forge =TRUE $}{}
+}
+\EVENTS{
+
+
+
+\EVT{Integrity}{false}{ordinary}{Integrity}{}{
+
+	\GUARDS{true}{
+
+
+		\Guard{grd10}{false}{$tamper=FALSE \limp{}rec2=p\_out$}{true}{}
+		\Guard{grd9}{false}{$tamper=TRUE  \limp{}rec2=  \{front\mapsto{}F\_real+1, int\mapsto{}2, len\mapsto{}F\_real-R\_real, mac\mapsto{}mac\_forge\}$}{true}{}
+
+
+
+
+
+	}
+	\ACTIONS{true}{
+
+
+		\Action{act3}{$valid\_forge\bcmsuch{} (tamper=FALSE\limp{}valid\_forge'=FALSE) \land{} (tamper=TRUE\limp{}valid\_forge' =bool(mac\_forge=comp\_mac(F\_real+1\mapsto{}2\mapsto{}F\_real-R\_real)))$}{true}{}
+	}
+}
+
+
+
+
+\EVT{Tamper}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$phase=integrity$}{true}{}
+		\Guard{grd2}{false}{$F\_real\neq{}l$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$tamper\bcmeq{}TRUE$}{true}{}
+	}
+}
+}
+\END
+	\end{multicols}{2}
+\end{tiny}
+\end{document}

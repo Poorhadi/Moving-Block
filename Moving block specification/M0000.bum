@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="M000"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="C2"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="phase"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="R_real"/>
+<org.eventb.core.variable name="/" org.eventb.core.comment=" " org.eventb.core.identifier="F_real"/>
+<org.eventb.core.variable name="1" org.eventb.core.identifier="operation"/>
+<org.eventb.core.variable name="D" org.eventb.core.identifier="stop"/>
+<org.eventb.core.variable name="T" org.eventb.core.identifier="p_out"/>
+<org.eventb.core.variable name="V" org.eventb.core.identifier="p_in"/>
+<org.eventb.core.variable name="\" org.eventb.core.identifier="R_est"/>
+<org.eventb.core.variable name="]" org.eventb.core.identifier="F_est"/>
+<org.eventb.core.event name="^" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="(" org.eventb.core.assignment="tamper ≔ FALSE" org.eventb.core.label="act13"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="valid_forge ≔ FALSE" org.eventb.core.label="act14"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Move">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Move"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="`" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Report">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Report"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="phase=report"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="phase≔integrity" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="fr"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="i"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="fr∈T ∧ le∈T ∧ i∈{0,1,2}"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="le"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="p_out≔ {front↦fr, int↦i, len↦le, mac↦m} " org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="fr≥F_real ∧ fr≤F_real+2 "/>
+<org.eventb.core.guard name="3" org.eventb.core.label="grd5" org.eventb.core.predicate="i=2 ⇒ (fr−R_real≤le)"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="grd6" org.eventb.core.predicate="i∈{0,1}⇒ le=0"/>
+<org.eventb.core.guard name=":" org.eventb.core.label="grd9" org.eventb.core.predicate="fr−le∈T"/>
+<org.eventb.core.parameter name=";" org.eventb.core.identifier="m"/>
+<org.eventb.core.guard name="=" org.eventb.core.label="grd10" org.eventb.core.predicate="m=comp_mac(fr↦i↦le)"/>
+<org.eventb.core.guard name="&gt;" org.eventb.core.label="grd11" org.eventb.core.predicate="m∈ℕ " org.eventb.core.theorem="true"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="a" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Integrity">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Integrity"/>
+<org.eventb.core.guard name="/" org.eventb.core.comment=" " org.eventb.core.label="grd5" org.eventb.core.predicate="phase=integrity"/>
+<org.eventb.core.guard name="internal;" org.eventb.core.label="grd11" org.eventb.core.predicate="mac_forge∈ℕ "/>
+<org.eventb.core.guard name="internal9" org.eventb.core.label="grd10" org.eventb.core.predicate="tamper=FALSE ⇒rec2=p_out"/>
+<org.eventb.core.guard name="internal8" org.eventb.core.label="grd9" org.eventb.core.predicate="tamper=TRUE  ⇒rec2=  {front↦F_real+1, int↦2, len↦F_real−R_real, mac↦mac_forge}"/>
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="phase :∣ (acc=TRUE⇒phase'=res) ∧ (acc=FALSE⇒phase'=detection)" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="rec2"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="rec2∈Fieldsp→ ℕ  "/>
+<org.eventb.core.action name="internal2" org.eventb.core.assignment="p_in≔rec2" org.eventb.core.label="act2"/>
+<org.eventb.core.parameter name="internal4" org.eventb.core.identifier="acc"/>
+<org.eventb.core.guard name="internal5" org.eventb.core.label="grd6" org.eventb.core.predicate="acc∈BOOL"/>
+<org.eventb.core.guard name="internal6" org.eventb.core.label="grd7" org.eventb.core.predicate="comp_mac(rec2(front)↦rec2(int)↦rec2(len))= rec2(mac)⇒acc=TRUE"/>
+<org.eventb.core.guard name="internal7" org.eventb.core.label="grd8" org.eventb.core.predicate="comp_mac(rec2(front)↦rec2(int)↦rec2(len))≠ rec2(mac)⇒acc=FALSE"/>
+<org.eventb.core.guard name="internal&gt;" org.eventb.core.label="grd12" org.eventb.core.predicate="(tamper=TRUE ∧ mac_forge=comp_mac(F_real+1↦2↦F_real−R_real)) ⇒acc=TRUE" org.eventb.core.theorem="true"/>
+<org.eventb.core.parameter name="internal:" org.eventb.core.identifier="mac_forge"/>
+<org.eventb.core.action name="internal=" org.eventb.core.assignment="valid_forge:∣ (tamper=FALSE⇒valid_forge'=FALSE) ∧ (tamper=TRUE⇒valid_forge' =bool(mac_forge=comp_mac(F_real+1↦2↦F_real−R_real)))" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="b" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Res">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Res"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="phase=res"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="phase:∣ (validity=TRUE ⇒ phase'=est) ∧ (validity=FALSE⇒ phase'=detection)" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="validity"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="validity∈BOOL"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="bool(p_in(int)∈{0,1}⇒p_in(len)=0)=valid1"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="valid1"/>
+<org.eventb.core.parameter name="." org.eventb.core.identifier="valid2"/>
+<org.eventb.core.parameter name="/" org.eventb.core.identifier="valid3"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="bool(p_in(int)=2⇒p_in(len)≥3)=valid2"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="bool(p_in(front)≥R_est ∧ p_in(front)∈T ∧ p_in(front)− p_in(len)∈T ∧ p_in(int)∈{0,1,2})=valid3"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd7" org.eventb.core.predicate="validity=TRUE⇔(valid1=TRUE ∧ valid2=TRUE ∧ valid3=TRUE)"/>
+<org.eventb.core.guard name="3" org.eventb.core.label="grd8" org.eventb.core.predicate="(tamper=TRUE ∧ valid_forge=TRUE)⇒valid1=TRUE" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="4" org.eventb.core.label="grd9" org.eventb.core.predicate="(tamper=TRUE ∧ valid_forge=TRUE)⇒ valid2=TRUE" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="5" org.eventb.core.label="grd10" org.eventb.core.predicate="(tamper=TRUE ∧ valid_forge=TRUE)⇒ valid3=TRUE" org.eventb.core.theorem="true"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="c" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Est">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Est"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="phase=est"/>
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="phase≔checking" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="internal2" org.eventb.core.assignment="R_est≔r_est" org.eventb.core.label="act2"/>
+<org.eventb.core.parameter name="internal1" org.eventb.core.identifier="r_est"/>
+<org.eventb.core.parameter name="internal2" org.eventb.core.identifier="f_est"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="f_est=p_in(front)"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="r_est∈T"/>
+<org.eventb.core.guard name="internal5" org.eventb.core.label="grd9" org.eventb.core.predicate="p_in(int)=2 ⇒ r_est=f_est−p_in(len)"/>
+<org.eventb.core.guard name="internal4" org.eventb.core.label="grd8" org.eventb.core.predicate="p_in(int)∈{0,1} ⇒ r_est=R_est"/>
+<org.eventb.core.guard name="internal6" org.eventb.core.label="grd10" org.eventb.core.predicate="(tamper=TRUE ∧ valid_forge=TRUE)⇒ (r_est=(F_real+1)− (F_real−R_real))" org.eventb.core.theorem="true"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="F_est≔f_est" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="d" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Detection">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Detection"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="e" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Checking">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Checking"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="phase=checking"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="phase≔move" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="s∈BOOL "/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="stop≔s" org.eventb.core.label="act2"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="s"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="R_est&gt;R_real⇔s=TRUE"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="tamper=TRUE ∧ valid_forge =TRUE⇒s=TRUE" org.eventb.core.theorem="true"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="h" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Tamper">
+<org.eventb.core.action name="'" org.eventb.core.assignment="tamper≔TRUE" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="phase=integrity"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="F_real≠l"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="i" org.eventb.core.identifier="tamper"/>
+<org.eventb.core.invariant name="j" org.eventb.core.label="inv2" org.eventb.core.predicate="tamper ∈ BOOL"/>
+<org.eventb.core.invariant name="l" org.eventb.core.label="inv4" org.eventb.core.predicate="tamper=FALSE ∧ phase∈{res,est,checking} ⇒ p_in=p_out"/>
+<org.eventb.core.invariant name="k" org.eventb.core.label="inv3" org.eventb.core.predicate="(tamper=FALSE ∧ phase=checking)⇒ R_est≤R_real" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="m" org.eventb.core.label="inv5" org.eventb.core.predicate="(tamper=TRUE ∧ phase=checking )⇒ R_real&lt;R_est"/>
+<org.eventb.core.variable name="n" org.eventb.core.identifier="valid_forge"/>
+<org.eventb.core.invariant name="o" org.eventb.core.label="inv6" org.eventb.core.predicate="valid_forge ∈ BOOL"/>
+<org.eventb.core.invariant name="p" org.eventb.core.label="inv7" org.eventb.core.predicate="(tamper=TRUE ∧ phase∈{res,est} )⇒ (p_in(front)=F_real+1 ∧ p_in(int)=2 ∧ p_in(len)=F_real−R_real)"/>
+<org.eventb.core.invariant name="q" org.eventb.core.label="inv8" org.eventb.core.predicate="(tamper=TRUE ∧ valid_forge=TRUE)⇒phase≠detection"/>
+<org.eventb.core.invariant name="r" org.eventb.core.label="inv9" org.eventb.core.predicate="(valid_forge =TRUE∧ tamper=TRUE)⇒comp_mac(p_in(front)↦p_in(int)↦p_in(len))= p_in(mac)"/>
+<org.eventb.core.invariant name="s" org.eventb.core.label="inv10" org.eventb.core.predicate="tamper=FALSE⇒valid_forge=FALSE"/>
+<org.eventb.core.invariant name="t" org.eventb.core.label="inv11" org.eventb.core.predicate="tamper=TRUE⇒F_real≠l"/>
+<org.eventb.core.invariant name="u" org.eventb.core.label="inv12" org.eventb.core.predicate="tamper=TRUE  ∧ phase=move ⇒(stop=TRUE ∨ operation=abnormal)"/>
+<org.eventb.core.invariant name="v" org.eventb.core.label="inv13" org.eventb.core.predicate="(tamper=TRUE ∧ phase∈{res,est,checking}) ⇒ valid_forge =TRUE "/>
+</org.eventb.core.machineFile>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="inv7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv12/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="90" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="90" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="90" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="90" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="90" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/act3/FIS" org.eventb.core.confidence="1000" org.eventb.core.poStamp="73" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/act7/FIS" org.eventb.core.confidence="1000" org.eventb.core.poStamp="73" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/act3/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="74" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/act7/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="73" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Move/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Report/grd10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Report/grd11/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Report/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="Report/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="Report/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Integrity/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Integrity/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Integrity/rec1/WFIS" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Integrity/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Integrity/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Integrity/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Integrity/grd1/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Integrity/act1/FIS" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Integrity/act1/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Res/grd8/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Res/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Res/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Res/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Res/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Res/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Res/grd5/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Res/grd6/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Est/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Est/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Est/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Est/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Est/grd5/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Est/grd9/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Est/grd8/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Detection/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Checking/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="92" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

@@ -1,0 +1,135 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\usepackage{multicol}
+\begin{document}
+	\begin{tiny}
+
+
+\begin{multicols}{2}
+\SingleHeader{}
+\MACHINE{}{}{}{}
+\VARIABLES{
+	\Variable{phase, operation, prm, stop, R\_real, R\_est, F\_real, F\_est}{}
+
+}
+\INVARIANTS{
+
+
+
+	\Invariant{inv7}{false}{$(phase=checking \land{} prm=TRUE) \limp{} R\_est\leq{}R\_real$}{}
+
+}
+\EVENTS{
+
+\EVT{Move}{false}{}{}{}{
+	\ANY{
+		\Param{m}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$phase=move$}{true}{}
+
+
+
+
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$phase\bcmeq{}report$}{true}{}
+		\Action{act2}{$R\_real\bcmeq{}R\_real+m$}{true}{}
+		\Action{act3}{$F\_real\bcmeq{}F\_real+m$}{true}{}
+	}
+}
+\EVT{Report}{false}{}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$phase=report$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$phase\bcmeq{}integrity$}{true}{}
+	}
+}
+\EVT{Integrity}{false}{}{}{}{
+	
+	\GUARDS{true}{
+
+		\Guard{grd5}{false}{$phase=integrity$}{true}{}
+
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$phase\bcmin{}\{detection, res\}$}{true}{}
+
+	}
+}
+\EVT{Res}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$phase=res$}{true}{}
+
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$phase\bcmin{}\{detection, est\}  $}{true}{}
+	}
+}
+\EVT{Est}{false}{ordinary}{}{}{
+
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$phase=est$}{true}{}
+
+
+		\Guard{grd4}{false}{$prm=TRUE \limp{}r\_est\leq{}R\_real $}{true}{}
+
+
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$phase\bcmeq{}checking$}{true}{}
+		\Action{act2}{$R\_est\bcmeq{}r\_est$}{true}{}
+
+	}
+}
+\EVT{Detection}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$phase=detection$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$phase\bcmeq{}move$}{true}{}
+		\Action{act2}{$operation\bcmeq{}abnormal$}{true}{}
+	}
+}
+\EVT{Checking}{false}{ordinary}{}{}{
+
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$phase=checking$}{true}{}
+
+		\Guard{grd3}{false}{$R\_est>R\_real\leqv{}s=TRUE$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$phase\bcmeq{}move$}{true}{}
+		\Action{act2}{$stop\bcmeq{}s$}{true}{}
+	}
+}
+}
+\END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{multicols}{2}
+	\end{tiny}
+\end{document}
